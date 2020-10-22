@@ -10,7 +10,13 @@ exports.getIndex = async (req, res) => {
 exports.getStaffMember = async (req, res) => {
     let {ID} = req.query;
     let values = await functions.SelectStaffMember(ID);
-    let display = values.recordsets;
+    let display = values.recordset;
     console.log(display);
     res.send(display);
+}
+
+exports.postStaff = async (req, res) => {
+    // let { all of the values} = req.query
+    functions.createStaffMember();
+    res.send('Employee created. Was it Diwa again?')
 }
