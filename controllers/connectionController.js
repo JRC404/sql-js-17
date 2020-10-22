@@ -20,3 +20,8 @@ exports.postStaff = async (req, res) => {
     functions.createStaffMember();
     res.send('Employee created. Was it Diwa again?')
 }
+
+exports.deleteStaffMember = async (req, res) => {
+    functions.deleteDiwa();
+    res.send('diwa has been deleted')
+}
