@@ -22,6 +22,7 @@ exports.postStaff = async (req, res) => {
 }
 
 exports.deleteStaffMember = async (req, res) => {
-    functions.deleteDiwa();
+    let {ID} = req.query;
+    functions.deleteDiwa(ID);
     res.send('diwa has been deleted')
 }
